@@ -16,14 +16,44 @@
   <!-- Import the CPM test classes -->
   <script src="./js/test/utils/TestingUtilities.js"></script>
   <script src="./js/main/MainApplication.js"></script>
+  
+  <script type="text/javascript">
+            function evaluateUserInput(){
+                let inputSuperheroname = document.getElementById("Superheroname").value;
+                let outputDisplay = "Your super hero name is: " + inputSuperheroname + "!";
+                document.getElementById("output").innerHTML = outputDisplay;
+                return false;
+            }
+            </script>
 
 </head>
 
-<!-- ---------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------------------------- -->
 
-<body>
+  <body>
+<form id="myform" action= evaluateUserInput()></form>
+
+Super Hero Name: <br>
+<label for="Super"></label>
+<input type="text" id="Superheroname"><br><br>
+
+
+<!-- label for drop down-->
+<label for="Ability">Choose your favorite Super Hero Ability:</label><br>
+<select name="Superheropowerselect" id="Superheropowerselect" style="
+width:179px;
+height:23px; 
+">
+ 
+    <option value="Super Strength">Super Strength</option>
+    <option value="Flight">Flight</option>
+    <option value="Cloak">Cloak</option>
+    <option value="Super Speed">Super Speed</option>
+  </select><br><br>
+</form><br>
+  <p id="output"></p><br>
+  <!--<input type="submit" value="Submit">-->
+  <button id="submit_button" onClick="return evaluateUserInput();">Submit</button>
+  
   <!-- body begins here -->
 
   View the `Console` tab of the `Developer Tools` to see output of the JavaScript Files
@@ -31,18 +61,12 @@
 
 
 
-  <!-- ====================================================== -->
-  <!-- ====================================================== -->
   <footer>
     <!-- footer of page begins here -->
     <script src="./js/test/TestMainApplication.js"></script>
   </footer> <!-- footer of page ends here -->
-  <!-- ====================================================== -->
-  <!-- ====================================================== -->
+
 
 </body>
-<!-- ---------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------------------------- -->
 
 </html>
