@@ -19,18 +19,22 @@
   
   <script type="text/javascript">
             function evaluateUserInput(){
+              let Superheropowerselects = document.getElementById("Superheropowerselect").value;
+              let outputpowerselcetion = "and you power is" + Superheropowerselects
                 let inputSuperheroname = document.getElementById("Superheroname").value;
-                let outputDisplay = "Your super hero name is: " + inputSuperheroname + "!";
+                let outputDisplay = "Your super hero name is " + inputSuperheroname + "!" + outputpowerselcetion; 
                 document.getElementById("output").innerHTML = outputDisplay;
                 return false;
             }
+            
             </script>
+            <!-- thought is to create a function to evaulate dropbox selection while printing out option on click "within script above" -->
 
 </head>
 
 
   <body>
-<form id="myform" action= evaluateUserInput()></form>
+<form>
 
 Super Hero Name: <br>
 <label for="Super"></label>
@@ -39,7 +43,7 @@ Super Hero Name: <br>
 
 <!-- label for drop down-->
 <label for="Ability">Choose your favorite Super Hero Ability:</label><br>
-<select name="Superheropowerselect" id="Superheropowerselect" style="
+<select id="Superheropowerselect" style="
 width:179px;
 height:23px; 
 ">
